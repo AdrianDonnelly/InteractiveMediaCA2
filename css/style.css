@@ -53,12 +53,16 @@ html {
 
 section {
     background-color: #000000 !important;
-    border-bottom: 2px solid var(--border-color);
     padding: 4rem 0;
 }
 
 main {
     background-color: #000000 !important;
+}
+
+/* Ensure consistent max-width across all sections */
+.container {
+    max-width: 65rem !important;
 }
 
 .hero-section {
