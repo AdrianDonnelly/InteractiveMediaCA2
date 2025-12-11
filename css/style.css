@@ -27,6 +27,47 @@ html {
     background-color: #000000 !important;
 }
 
+/* ===== ANIMATIONS ===== */
+#skillsToggle {
+    min-width: 240px;
+    white-space: nowrap;
+}
+
+.skills-container {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-in {
+    animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+.fade-out {
+    animation: fadeOut 0.3s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
 /* ===== NAVIGATION ===== */
 .navbar {
     background-color: #000000 !important;
@@ -49,6 +90,48 @@ html {
 
 .nav-link:hover {
     opacity: 0.7;
+}
+/* ===== CAROUSEL STYLING ===== */
+.carousel {
+    border: 1px solid #444;
+}
+
+.carousel-inner {
+    border-radius: 0 !important;
+}
+
+.carousel-item img {
+    border-radius: 0 !important;
+    object-fit: cover;
+    height: 400px;
+}
+
+.carousel-indicators [data-bs-target] {
+    border-radius: 0;
+}
+
+/* ===== ACHIEVEMENTS LIST ===== */
+.achievements-list {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.achievement-item {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #333;
+    transition: background-color 0.2s ease;
+}
+
+.achievement-item:last-child {
+    border-bottom: none;
+}
+
+.achievement-item:hover {
+    background-color: rgba(255, 255, 255, 0.02);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: -1rem;
+    margin-right: -1rem;
 }
 
 section {
@@ -175,6 +258,20 @@ main {
     border-width: 2px;
 }
 
+.card {
+    border-radius: 0 !important;
+    background-color: #000000 !important;
+}
+
+.badge {
+    border-radius: 0 !important;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    border: 1px solid var(--border-color);
+}
+
+.btn-primary {
 .btn-primary {
     background-color: var(--text-primary);
     color: #000000;
@@ -199,13 +296,6 @@ main {
     border-color: var(--text-primary);
 }
 
-.badge {
-    border-radius: 0;
-    text-transform: uppercase;
-    font-size: 0.75rem;
-    letter-spacing: 0.1em;
-    border: 1px solid var(--border-color);
-}
 
 
 h1, h2, h3, h4, h5, h6 {
@@ -328,29 +418,6 @@ hr {
 
 .shadow-sm {
     box-shadow: none !important;
-}
+}}
 
-
-.grading-ribbon {
-    position: fixed;
-    right: 0;
-    top: 100px;
-    background: var(--text-primary);
-    color: #000000;
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    border: 2px solid var(--border-color);
-    border-right: none;
-    z-index: 1000;
-    text-transform: uppercase;
-    font-size: 0.85rem;
-    letter-spacing: 0.1em;
-    transition: all var(--transition-speed);
-}
-
-.grading-ribbon:hover {
-    background: #000000;
-    color: var(--text-primary);
-    padding-right: 1.5rem;
-}
 
