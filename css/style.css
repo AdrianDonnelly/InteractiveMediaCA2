@@ -134,6 +134,35 @@ html {
     margin-right: -1rem;
 }
 
+/* ===== MODAL STYLING ===== */
+.modal-content {
+    border-radius: 0 !important;
+}
+
+.modal-header,
+.modal-footer {
+    border-radius: 0 !important;
+}
+
+.form-control {
+    border-radius: 0 !important;
+}
+
+.form-control:focus {
+    background-color: #000000;
+    border-color: #ffffff;
+    color: #ffffff;
+    box-shadow: none;
+}
+
+.alert {
+    border-radius: 0 !important;
+}
+
+.btn-close {
+    border-radius: 0 !important;
+}
+
 section {
     background-color: #000000 !important;
     padding: 4rem 0;
@@ -348,7 +377,8 @@ h1, h2, h3, h4, h5, h6 {
 
     /* Hero responsive */
     .hero-overlay-text {
-        margin-bottom: -100px;
+        margin-bottom: -80px; /* Adjusted for tablet to keep text partially off */
+        max-width: 70%; /* Limit width to prevent complete overlap */
     }
 
     .hero-main-title {
@@ -386,7 +416,8 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .hero-overlay-text {
-        margin-bottom: -60px;
+        margin-bottom: -30px; /* Reduced from -60px to keep text half off */
+        max-width: 85%; /* Ensure text doesn't extend too far right */
     }
 
     .hero-main-title {
@@ -395,8 +426,8 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .hero-image-container {
-        max-width: 100%;
-        margin: 0;
+        max-width: 90%; /* Reduced from 100% to allow text to stay partially off */
+        margin: 0 auto 0 auto; /* Center the image slightly */
     }
 
     .hero-content-box {
