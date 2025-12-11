@@ -63,12 +63,81 @@ main {
 
 .hero-section {
     background-color: #000000 !important;
-    border-bottom: 2px solid var(--border-color);
+    border: none;
     min-height: 100vh;
-    padding-top: 6rem;
+    padding: 8rem 2rem 4rem;
+    margin-bottom: 2rem;
 }
 
+/* Hero wrapper for positioning */
+.hero-wrapper {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
+/* Large overlapping text */
+.hero-overlay-text {
+    position: relative;
+    z-index: 2;
+    margin-bottom: -150px;
+}
+
+.hero-main-title {
+    font-size: clamp(2rem, 8vw, 4.5rem);
+    font-weight: 900;
+    line-height: 0.9;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    margin: 0;
+    padding: 0;
+}
+
+/* Hero image container */
+.hero-image-container {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: 0;
+    border: none;
+}
+
+.hero-image-container .hero-photo {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Content box below image */
+.hero-content-box {
+    border: 2px solid var(--border-color);
+    padding: 2rem;
+    margin-top: 2rem;
+    background-color: #000000;
+}
+
+.hero-subtitle {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.hero-description {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+/* Info section */
+.hero-info-section {
+    margin-top: 2rem;
+}
+
+/* Old hero styles - keeping for backwards compatibility */
 .hero-photo-wrapper {
     max-width: 300px;
     width: 100%;
@@ -80,12 +149,6 @@ main {
     background: #000000;
 }
 
-.hero-photo {
-    display: block;
-    width: 100%;
-    height: auto;
-    max-width: 300px;
-}
 
 
 .btn {
@@ -166,11 +229,78 @@ h1, h2, h3, h4, h5, h6 {
         border-top: none;
         padding: 1rem;
     }
+
+    section {
+        padding: 2rem 1rem;
+    }
+
+    .content-box,
+    .about-box,
+    .skills-box,
+    .contact-box {
+        padding: 1.5rem;
+    }
+
+    /* Hero responsive */
+    .hero-overlay-text {
+        margin-bottom: -100px;
+    }
+
+    .hero-main-title {
+        font-size: clamp(1.8rem, 7vw, 3.5rem);
+    }
+
+    .hero-image-container {
+        max-width: 500px;
+    }
 }
 
 @media (max-width: 576px) {
     .hero-photo-wrapper {
         max-width: 200px;
+    }
+
+    section {
+        padding: 1.5rem 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .content-box,
+    .about-box,
+    .skills-box,
+    .contact-box,
+    .project-item,
+    .timeline-item {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Hero responsive mobile */
+    .hero-section {
+        padding: 6rem 1rem 2rem;
+    }
+
+    .hero-overlay-text {
+        margin-bottom: -60px;
+    }
+
+    .hero-main-title {
+        font-size: clamp(1.5rem, 10vw, 2.5rem);
+        line-height: 1;
+    }
+
+    .hero-image-container {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .hero-content-box {
+        padding: 1.5rem;
+        margin-top: 1.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.5rem;
     }
 }
 
