@@ -66,7 +66,18 @@ main {
     border: none;
     min-height: 100vh;
     padding: 8rem 2rem 4rem;
-    margin-bottom: 2rem;
+    margin-bottom: 0;
+}
+
+.bordered-section {
+    border-top: 1px solid #444;
+    border-bottom:  1px solid #444;
+}
+
+.content-block {
+    border-left: 1px solid #444;
+    border-right: 1px solid #444;
+    padding: 2rem;
 }
 
 /* Hero wrapper for positioning */
