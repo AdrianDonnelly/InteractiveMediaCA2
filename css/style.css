@@ -369,7 +369,6 @@ i.text-warning {
 
     .navbar-collapse {
         background-color: #000000;
-        border: 2px solid var(--border-color);
         border-top: none;
         padding: 1rem;
     }
