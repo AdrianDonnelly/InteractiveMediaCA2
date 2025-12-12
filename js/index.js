@@ -1,4 +1,17 @@
 document.addEventListener('DOMContentLoaded', function() {
+    const backToTopBtn = document.getElementById('backToTop');
+
+    if (backToTopBtn) {
+        backToTopBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+});
+document.addEventListener('DOMContentLoaded', function() {
     const toggleButton = document.getElementById('skillsToggle');
     const toggleText = document.getElementById('toggleText');
     const technicalSkills = document.getElementById('technicalSkills');
@@ -47,20 +60,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     technicalSkills.classList.add('fade-in');
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    const backToTopBtn = document.getElementById('backToTop');
-
-    if (backToTopBtn) {
-        backToTopBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-    }
 });
 
 function sendEmail() {

@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Grading Notes – Adrian Donnelly</title>
+    <meta name="description" content="Bootstrap implementation and grading notes for Adrian Donnelly's portfolio.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav id="mainNav" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+    <div class="container">
+        <a class="navbar-brand fw-semibold" href="index.html">Adrian Donnelly</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#education">Education</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#experience">Experience</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+                <li class="nav-item"><a class="nav-link grading-link" href="implementation-notes.html">Grading</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main class="mt-5 pt-4">
+    <section class="py-5">
+        <div class="container">
+            <h1 class="mb-4">Implementation Notes</h1>
+            <div class="bordered-section">
+                <div class="content-block">
+                    <p class="lead ">
+                        The portfolio is a single-page site built with Bootstrap 5 components and features with a custom black, white and blue theme. This page documents:
+                    </p>
+                    <ul class="mb-4 pb-3 ">
+                        <li>Bootstrap features and components used throughout the site</li>
+                        <li>Custom JavaScript features developed for enhanced functionality</li>
+                        <li>Hosting details</li>
+                    </ul>
+
+                    <!-- Bootstrap Components Section -->
+                    <div class="mb-5">
+                        <h2 class="mb-4 pb-3 section-header-border">1. Bootstrap Components and Features Used</h2>
+                        <p class=" mb-4">This section lists Bootstrap features that provide layout, components and behaviour without custom implementation.</p>
+
+                        <h3 class="h5 mb-3">1.1 Interactive Components</h3>
+
+                        <div class="mb-4 ps-3">
+                            <h4 class="h6 mb-2">Modal</h4>
+                            <ul class="">
+                                <li>Email contact modal in the Contact section with form inputs</li>
+                                <li>Uses <code>.modal</code>, <code>.modal-dialog</code>, <code>.modal-content</code>, <code>.modal-header</code>, <code>.modal-body</code>, and <code>.modal-footer</code></li>
+                                <li>Triggered with <code>data-bs-toggle="modal"</code> and <code>data-bs-target="#emailModal"</code></li>
+                                <li>Includes <code>.btn-close</code> for accessible close functionality</li>
+                                <li>Bootstrap handles opening, closing, backdrop, and focus management</li>
+                                <li><strong>Docs:</strong> <a href="https://getbootstrap.com/docs/5.3/components/modal/" target="_blank" class="">Modal</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="mb-4 ps-3">
+                            <h4 class="h6 mb-2">Carousel</h4>
+                            <ul class="">
+                                <li>Three carousels in the Hobbies section (Music, Motorcycles, Hiking)</li>
+                                <li>Uses <code>.carousel</code>, <code>.carousel-inner</code>, <code>.carousel-item</code>, <code>.carousel-indicators</code>, and <code>.carousel-control-prev/next</code></li>
+                                <li>Autoplaying functionality with <code>data-bs-ride="carousel"</code></li>
+                                <li>Navigation controls with previous/next buttons and slide indicators</li>
+                                <li><strong>Docs:</strong> <a href="https://getbootstrap.com/docs/5.3/components/carousel/" target="_blank" class="">Carousel</a></li>
+                            </ul>
+                        </div>
+
+                        <h3 class="h5 mb-3 mt-4">1.2 Navigation and Page Behaviour</h3>
+
+                        <div class="mb-4 ps-3">
+                            <h4 class="h6 mb-2">Navbar</h4>
+                            <ul class="">
+                                <li>The top navigation uses <code>.navbar</code>, <code>.navbar-expand-lg</code>, <code>.navbar-dark</code>, <code>.bg-dark</code>, and <code>.fixed-top</code></li>
+                                <li>Includes <code>.navbar-brand</code> and <code>.navbar-nav</code> with section links</li>
+                                <li>Collapses into a hamburger menu on smaller screens with <code>.navbar-toggler</code></li>
+                                <li>Used at the top of index.html</li>
+                                <li><strong>Docs:</strong> <a href="https://getbootstrap.com/docs/5.3/components/navbar/" target="_blank" class="">Navbar</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="mb-4 ps-3">
+                            <h4 class="h6 mb-2">Scrollspy</h4>
+                            <ul class="">
+                                <li>Enabled on <code>&lt;body&gt;</code> with <code>data-bs-spy="scroll"</code>, <code>data-bs-target="#mainNav"</code>, and <code>data-bs-offset="80"</code></li>
+                                <li>Bootstrap automatically updates the active navbar link based on scroll position</li>
+                                <li><strong>Docs:</strong> <a href="https://getbootstrap.com/docs/5.3/components/scrollspy/" target="_blank" class="">Scrollspy</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="mb-4 ps-3">
+                            <h4 class="h6 mb-2">Collapse</h4>
+                            <ul class="">
+                                <li>The mobile menu uses Collapse via <code>data-bs-toggle="collapse"</code> and <code>data-bs-target="#navbarContent"</code></li>
+                                <li>Bootstrap handles show and hide behaviour automatically</li>
+                                <li><strong>Docs:</strong> <a href="https://getbootstrap.com/docs/5.3/components/collapse/" target="_blank" class="">Collapse</a></li>
+                            </ul>
+                        </div>
+
+                        <h3 class="h5 mb-3 mt-4">1.3 Forms, Buttons and Icons</h3>
+
+                        <div class="mb-4 ps-3">
+                            <h4 class="h6 mb-2">Buttons</h4>
+                            <ul class="">
+                                <li>Variety of button styles: <code>.btn-primary</code>, <code>.btn-secondary</code>, <code>.btn-success</code>, <code>.btn-outline-light</code></li>
+                                <li>Size variants: <code>.btn-lg</code>, <code>.btn-sm</code></li>
+                                <li>Full-width buttons with <code>.w-100</code> in Contact section</li>
+                                <li>Custom sharp corners (border-radius: 0) applied via CSS</li>
+                                <li><strong>Docs:</strong> <a href="https://getbootstrap.com/docs/5.3/components/buttons/" target="_blank" class="">Buttons</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="mb-4 ps-3">
+                            <h4 class="h6 mb-2">Forms</h4>
+                            <ul class="">
+                                <li>The email form inside the Contact modal uses Bootstrap form markup</li>
+                                <li>Includes <code>.form-label</code>, <code>.form-control</code>, and custom <code>.bg-black</code> styling</li>
+                                <li>Input types: text, email, and textarea</li>
+                                <li>HTML5 validation with required attributes</li>
+                                <li><strong>Docs:</strong> <a href="https://getbootstrap.com/docs/5.3/forms/overview/" target="_blank" class="">Forms</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="mb-4 ps-3">
+                            <h4 class="h6 mb-2">Bootstrap Icons</h4>
+                            <ul class="">
+                                <li>Icons throughout the site from Bootstrap Icons library (CDN)</li>
+                                <li>Examples: <code>.bi-envelope-fill</code>, <code>.bi-github</code>, <code>.bi-linkedin</code>, <code>.bi-trophy-fill</code>, <code>.bi-music-note-beamed</code>, <code>.bi-robot</code></li>
+                                <li>Used for visual enhancement in navigation, sections, achievements, skills, and social links</li>
+                                <li><strong>Docs:</strong> <a href="https://icons.getbootstrap.com/" target="_blank" class="">Bootstrap Icons</a></li>
+                            </ul>
+                        </div>
+
+                        <h3 class="h5 mb-3 mt-4">1.4 Content and Data Display</h3>
+
+                        <div class="mb-4 ps-3">
+                            <h4 class="h6 mb-2">Card</h4>
+                            <ul class="">
+                                <li>Used extensively throughout the different sections</li>
+                                <li>Components include <code>.card</code>, <code>.card-body</code>, <code>.card-header</code> with custom <code>.bg-dark</code> and <code>.border-secondary</code> styling</li>
+                                <li>Height utilities like <code>.h-100</code> ensure consistent card heights in project grid</li>
+                                <li><strong>Docs:</strong> <a href="https://getbootstrap.com/docs/5.3/components/card/" target="_blank" class="">Card</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="mb-4 ps-3">
+                            <h4 class="h6 mb-2">Badge</h4>
+                            <ul class="">
+                                <li>Bootstrap badges with <code>.badge</code>, <code>.bg-secondary</code>, <code>.bg-primary</code>, and <code>.bg-info</code></li>
+                                <li>Used to label skills (technical and soft skills), project technologies, education focus areas, and achievements</li>
+                                <li>Custom border styling applied for sharp corners</li>
+                                <li><strong>Docs:</strong> <a href="https://getbootstrap.com/docs/5.3/components/badge/" target="_blank" class="">Badges</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="mb-4 ps-3">
+                            <h4 class="h6 mb-2">Alerts</h4>
+                            <ul class="">
+                                <li>Alert component used in email modal with <code>.alert</code>, <code>.alert-info</code></li>
+                                <li>Informs users that clicking send will open their default email app</li>
+                                <li><strong>Docs:</strong> <a href="https://getbootstrap.com/docs/5.3/components/alerts/" target="_blank" class="">Alerts</a></li>
+                            </ul>
+                        </div>
+
+                        <h3 class="h5 mb-3 mt-4">1.5 Layout and Structure</h3>
+
+                        <div class="mb-4 ps-3">
+                            <h4 class="h6 mb-2">Grid System and Containers</h4>
+                            <ul class="">
+                                <li><code>.container</code>, <code>.row</code>, <code>.col-md-6</code>, and responsive classes such as <code>.col-md-6</code> and <code>.row.g-4</code> control the layout in the hero, about, education, projects, experience, skills, hobbies and contact sections.</li>
+                                <li>Custom max-width of 65rem applied to containers for consistent page width</li>
+                                <li><strong>Docs:</strong> <a href="https://getbootstrap.com/docs/5.3/layout/containers/" target="_blank" class="">Containers</a>, <a href="https://getbootstrap.com/docs/5.3/layout/grid/" target="_blank" class="">Grid</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="mb-4 ps-3">
+                            <h4 class="h6 mb-2">Utility Classes</h4>
+                            <ul class="">
+                                <li>Spacing classes such as <code>.mb-4</code>, <code>.pt-4</code>, <code>.py-5</code>, and <code>.gap-2</code></li>
+                                <li>Flex utilities such as <code>.d-flex</code>, <code>.justify-content-between</code>, <code>.align-items-center</code>, <code>.flex-column</code>, <code>.flex-md-row</code></li>
+                                <li>Text utilities: <code>.text-center</code>, <code>.text-muted</code>, <code>.text-md-end</code>, <code>.text-white</code></li>
+                                <li>Display utilities: <code>.d-block</code>, <code>.d-inline-flex</code>, <code>.d-grid</code></li>
+                                <li><strong>Docs:</strong> <a href="https://getbootstrap.com/docs/5.3/utilities/flex/" target="_blank" class="">Flex utilities</a>, <a href="https://getbootstrap.com/docs/5.3/utilities/spacing/" target="_blank" class="">Spacing</a>, <a href="https://getbootstrap.com/docs/5.3/utilities/text/" target="_blank" class="">Text</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="mb-4 ps-3">
+                            <h4 class="h6 mb-2">Responsive Images</h4>
+                            <ul class="">
+                                <li>Classes such as <code>.w-100</code>, <code>.h-auto</code>, and <code>.d-block</code> are used in the hero portrait and hobbies carousels to keep images responsive</li>
+                                <li><strong>Docs:</strong> <a href="https://getbootstrap.com/docs/5.3/content/images/" target="_blank" class="">Images</a></li>
+                            </ul>
+                        </div>
+
+                        <h3 class="h5 mb-3 mt-4">1.6 Additional Bootstrap Features</h3>
+
+                        <div class="mb-4 ps-3">
+                            <h4 class="h6 mb-2">Border Utilities</h4>
+                            <ul class="">
+                                <li>Border classes like <code>.border-secondary</code>, <code>.border-start</code>, <code>.border-bottom</code>, <code>.border-top</code></li>
+                                <li>Used extensively for the custom bordered design aesthetic</li>
+                                <li><strong>Docs:</strong> <a href="https://getbootstrap.com/docs/5.3/utilities/borders/" target="_blank" class="">Borders</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="mb-4 ps-3">
+                            <h4 class="h6 mb-2">Shadow Utilities</h4>
+                            <ul class="">
+                                <li><code>.shadow-sm</code> applied to the fixed navbar</li>
+                                <li><strong>Docs:</strong> <a href="https://getbootstrap.com/docs/5.3/utilities/shadows/" target="_blank" class="">Shadows</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="mb-4 ps-3">
+                            <h4 class="h6 mb-2">List Groups</h4>
+                            <ul class="">
+                                <li>List styling with <code>.list-unstyled</code> used in Education and Experience sections</li>
+                                <li>Custom bullet points using Bootstrap Icons instead of default list markers</li>
+                                <li><strong>Docs:</strong> <a href="https://getbootstrap.com/docs/5.3/components/list-group/" target="_blank" class="">List group</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- JavaScript Features Section -->
+                    <div class="mb-5">
+                        <h2 class="mb-4 pb-3 section-header-border">2. JavaScript Features</h2>
+                        <p class=" mb-4">Custom JavaScript functionality implemented to enhance user interactions and experience.</p>
+
+                        <div class="mb-4 ps-3">
+                            <h4 class="h6 mb-2">Skills Toggle with Fade Animation</h4>
+                            <ul class="">
+                                <li>Custom toggle button switches between Technical Skills and Soft Skills sections</li>
+                                <li>Smooth fade-in/fade-out animations using CSS</li>
+                                <li>Animation lock prevents stuttering when clicking rapidly</li>
+                            </ul>
+                        </div>
+
+                        <div class="mb-4 ps-3">
+                            <h4 class="h6 mb-2">Email Form Handler</h4>
+                            <ul class="">
+                                <li>Custom <code>sendEmail()</code> function collects form data</li>
+                                <li>Validates all required fields before submission</li>
+                                <li>Generates mailto: link with pre-filled subject and body</li>
+                                <li>Opens user's default email client with formatted message</li>
+                                <li>Automatically closes modal and resets form after send</li>
+                            </ul>
+                        </div>
+
+                        <div class="mb-4 ps-3">
+                            <h4 class="h6 mb-2">Back to Top Functionality</h4>
+                            <ul class="">
+                                <li>Smooth scroll behavior using <code>window.scrollTo()</code> with <code>behavior: 'smooth'</code></li>
+                                <li>Event listener attached to footer button</li>
+                                <li>Works across all pages (index.html and implementation-notes.html)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Hosting Section -->
+                    <div class="mb-5">
+                        <h2 class="mb-4 pb-3 section-header-border">3. Hosting</h2>
+                        <p class="mb-4">The portfolio website is hosted using GitHub Pages.</p>
+
+                        <div class="mb-4 ps-3">
+                            <ul class="">
+                                <li>URL: <a href="https://adriandonnelly.github.io/InteractiveMediaCA2/" target="_blank" class="text-primary">https://adriandonnelly.github.io/InteractiveMediaCA2/</a></li>
+                               </ul>
+                        </div>
+                    </div>
+
+                    <!-- Back to Portfolio Button -->
+                    <div class="text-center mt-5 pt-4 back-to-portfolio-border">
+                        <a href="index.html" class="btn btn-primary btn-lg">
+                            <i class="bi bi-arrow-left me-2"></i>Back to Portfolio
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="bg-dark text-white py-4 mt-5">
+    <div class="container">
+        <div class="bordered-section">
+            <div class="content-block text-center">
+                <p class="mb-3">&copy; 2025 Adrian Donnelly. All rights reserved.</p>
+                <div class="d-flex justify-content-center gap-3">
+                    <a href="https://linkedin.com/in/AdrianDonnelly" target="_blank" rel="noopener"
+                       class="social-icon-link" aria-label="LinkedIn">
+                        <i class="bi bi-linkedin fs-4"></i>
+                    </a>
+                    <a href="https://github.com/AdrianDonnelly" target="_blank" rel="noopener"
+                       class="social-icon-link" aria-label="GitHub">
+                        <i class="bi bi-github fs-4"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

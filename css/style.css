@@ -75,6 +75,12 @@ html {
 .nav-link:hover {
     opacity: 0.7;
 }
+.nav-link.grading-link {
+    color: var(--primary-color) !important;
+}
+.nav-link.grading-link:hover {
+    opacity: 0.7;
+}
 .carousel-item img {
     border-radius: 0 !important;
     object-fit: cover;
@@ -203,6 +209,15 @@ i.text-warning {
     opacity: 0.7;
     color: var(--primary-color);
 }
+.section-header-border {
+    border-bottom: 1px solid #444;
+}
+.back-to-portfolio-border {
+    border-top: 1px solid #444;
+}
+.hidden {
+    display: none;
+}
 @media (max-width: 991px) {
     .hero-photo-wrapper {
         max-width: 250px;
@@ -274,5 +289,4 @@ i.text-warning {
         padding: 1.5rem;
         margin-top: 1.5rem;
     }
-
 }
